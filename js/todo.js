@@ -2,6 +2,7 @@ const toDoForm =document.querySelector(".memo-toDoForm"),
 toDoInput=toDoForm.querySelector("input"),toDoList=document.querySelector(".memo-toDoList");
 toDoneList=document.querySelector('.memo-doneList');
 let toDos=[];
+let doingList=[];
 let doneList=[];
 function printTodo(text){
     const li=document.createElement("li");
@@ -13,7 +14,7 @@ function printTodo(text){
     done.innerText="✅";
     done.id="done";
     del.addEventListener("click",handleDeleteToDo);
-    done.addEventListener("click",handleDone);
+    done.addEventListener("click",handleDoing);
 
     const span=document.createElement("span");
     span.innerText=text;
@@ -28,6 +29,28 @@ function printTodo(text){
     }
     toDos.push(toDoObj);
     saveToDos();
+}
+function printDoing(text){
+    const li=document.createElement("li");
+    const del=document.createElement("button");
+    const done=document.createElement("button");
+    const date_id=new Date().getTime();
+
+    del.innerText="❌";
+    del.id="del";
+    del.addEventListener("click",handleDeleteDone);
+    const span=document.createElement("span");
+    span.innerText=text;
+    li.appendChild(span);
+    li.appendChild(del);
+    li.id=date_id
+    toDoneList.appendChild(li);
+    const doneObj={
+        text:text,
+        id:date_id
+    }
+    doneList.push(doneObj);
+    saveDoing();
 }
 function printDone(text){
     const li=document.createElement("li");
@@ -51,8 +74,12 @@ function printDone(text){
     doneList.push(doneObj);
     saveDone();
 }
+
 function saveToDos(){
     localStorage.toDo=JSON.stringify(toDos);
+}
+function saveDoing(){
+    localStorage.doing=JSON.stringify(doingList);
 }
 function saveDone(){
     localStorage.done=JSON.stringify(doneList);

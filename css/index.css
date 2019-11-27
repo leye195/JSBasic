@@ -58,7 +58,7 @@ form,.greetings{
 .showing{
     display: block;
 }
-.memo-toDoList,.memo-doneList{
+.memo-toDoList,.memo-doingList,.memo-doneList{
     display: inline-block;
     text-align: justify;
     list-style:none;
