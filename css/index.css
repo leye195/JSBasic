@@ -35,7 +35,7 @@ li{
     padding: 50px;
     padding-bottom: 10px;
 }
-.clock-title,.memo-greetings,.memo-toDoList li,.memo-doneList li{
+.clock-title,.memo-greetings,.memo-toDoList li,.memo-doneList li,p{
     color: #ffffff;
 }
 .memo-greetings{
@@ -64,17 +64,19 @@ form,.greetings{
     list-style:none;
     overflow-y: scroll;
     height: 300px;
-    width: 40%;
+    width: 50%;
     border: 4px solid ghostwhite;
     /* margin: 5px; */
+    margin:0px;
     border-radius: 10px;
     background-color: #423b30a8;
+    
 }
 .memo-weather{
     text-align: center;
     color: white;
 }
-.memo-weather,.temp{
+.memo-weather,.temp,.ul-container p{
     margin:0;
 }
 .temp{
@@ -94,4 +96,13 @@ span{
 }
 #done{
     background-color:#47c71d4f;
+}
+.ul-container{
+    display: flex;
+}
+.ul-container p{
+    font-weight: 300;
+}
+.ul-container div{
+    width: 50%;
 }
