@@ -8,8 +8,10 @@ function printTodo(text){
     const del=document.createElement("button");
     const done=document.createElement("button");
     const date_id=new Date().getTime();
-    del.innerText="X";
-    done.innerText="Done";
+    del.innerText="❌";
+    del.id="del";
+    done.innerText="✅";
+    done.id="done";
     del.addEventListener("click",handleDeleteToDo);
     done.addEventListener("click",handleDone);
 
@@ -33,7 +35,8 @@ function printDone(text){
     const done=document.createElement("button");
     const date_id=new Date().getTime();
 
-    del.innerText="X";
+    del.innerText="❌";
+    del.id="del";
     del.addEventListener("click",handleDeleteDone);
     const span=document.createElement("span");
     span.innerText=text;
