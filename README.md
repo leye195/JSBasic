@@ -1,7 +1,7 @@
 ## Nomad JS practice
 ### JS Clock ⏰ with Todo List 
 ### Feature
-# Input todo
-# Switch todo->doing->done;
-# Delete todo,doing,done
-# Through geolocation get weather Date from Weather API  
+Input todo</br>
+Switch todo->doing->done</br>
+Delete todo,doing,done</br>
+Through geolocation get weather Date from Weather API</br>  
