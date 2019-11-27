@@ -1,0 +1,78 @@
+html{
+    width:100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 2.0rem;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.bgimg{
+    /*padding:7%;*/
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+    z-index: -1;
+    animation: fadeIn 1.5s;
+}
+li{
+    text-decoration: none;
+}
+.memo-clock{
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 10px;
+}
+.clock-title,.memo-greetings,.memo-toDoList li,.memo-doneList li{
+    color: #ffffff;
+}
+.memo-greetings{
+    margin: 0;
+    padding:20px;
+}
+.memo-toDoForm{
+    display: block;
+}
+form,form input[type="text"],.memo-greetings{
+    text-align: center;
+    font-size:2.0rem ;
+}
+form,.greetings{
+    display: none;
+}
+.showing{
+    display: block;
+}
+.memo-toDoList,.memo-doneList{
+    display: inline-block;
+    text-align: justify;
+    list-style:none;
+    overflow-y: scroll;
+    height: 300px;
+    width: 40%;
+    border: 4px solid ghostwhite;
+    /* margin: 5px; */
+    border-radius: 10px;
+}
+.memo-weather{
+    text-align: center;
+    color: white;
+}
+.memo-weather,.temp{
+    margin:0;
+}
+.temp{
+    margin-bottom: 7px !important;
+}
